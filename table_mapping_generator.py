@@ -9,7 +9,7 @@ data['rules'] = []
 print('\n')
 readline.set_completer_delims(' \t\n=')
 readline.parse_and_bind("tab: complete")
-table_list_input = input("Enter the name of your table list file: ")     
+table_list_input = input("Enter the path of your table list file: ")     
 assert os.path.exists(table_list_input), "I did not find the table list file at, " + table_list_input
 
 def readTableList():
