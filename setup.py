@@ -1,14 +1,18 @@
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+
 setup(
     name='dmsmapgenerator',
     version='0.1.0',    
     description='This python tool generates a JSON file for the AWS DMS table mappings section.',
     url='https://github.com/emreoztoprak/dms-table-mapping-generator',
-    author='Emre Öztoprak',
+    author='Emre Oztoprak',
     author_email='e.oztoprak@yandex.com',
     license='MIT License',
-    packages=setuptools.find_packages(where="./"),
+    #packages=['dmsmapgenerator'],
     install_requires=['bullet==2.2.0',],
 
     classifiers=[
