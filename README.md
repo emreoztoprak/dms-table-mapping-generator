@@ -64,6 +64,8 @@ When you run the script it will ask for the file containing the list of tables. 
 ```
 table1
 table2
+...
+...
 ```
 
 After that, it will ask schema name. The default value is a wildcard. You can leave it or enter your schema name. That schema name will be applicable to all tables in the list. 
