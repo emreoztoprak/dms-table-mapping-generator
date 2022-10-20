@@ -3,13 +3,12 @@
 import json, os, readline
 from bullet import Bullet
 
-data = {}
-data['rules'] = []
+data = {'rules': []}
 
 print('\n')
 readline.set_completer_delims(' \t\n=')
 readline.parse_and_bind("tab: complete")
-table_list_input = input("Enter the path of your table list file: ")     
+table_list_input = input("Enter the path of your table list file: ")
 assert os.path.exists(table_list_input), "I did not find the table list file at, " + table_list_input
 
 def readTableList():
@@ -25,9 +24,9 @@ def ruleAction():
     rule_action = ["include","exclude","explicit"]
     prompt = Bullet(
             prompt = "\nSelect a action for your rules : ",
-            choices = rule_action, 
+            choices = rule_action,
             indent = 0,
-            align = 5, 
+            align = 5,
             margin = 2,
             shift = 0,
             bullet = "",
@@ -43,9 +42,9 @@ def tableType():
     table_types = ["table","view","all"]
     prompt = Bullet(
             prompt = "\nSelect whether to migrate tables, views or all : ",
-            choices = table_types, 
+            choices = table_types,
             indent = 0,
-            align = 5, 
+            align = 5,
             margin = 2,
             shift = 0,
             bullet = "",
@@ -70,7 +69,7 @@ def createJSON():
             },
             "rule-action": rule_action,
             "filters": []
-            })        
+            })
         with open('table_mapping.json', 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 createJSON()
