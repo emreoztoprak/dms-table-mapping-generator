@@ -62,8 +62,8 @@ Run the script
 When you run the script it will ask for the file containing the list of tables. That file should be like this.
 
 ```
-table1
-table2
+table1,column1,action1,columntype1
+table2,column2,action2,columntype2
 ...
 ...
 ```
